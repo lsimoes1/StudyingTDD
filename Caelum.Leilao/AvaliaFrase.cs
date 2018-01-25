@@ -21,7 +21,6 @@ namespace Caelum.Leilao
                     return false;
                 }
             }
-
             return true;
         }
     }

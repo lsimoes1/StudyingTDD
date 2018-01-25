@@ -16,6 +16,5 @@ C:\Users\lsimoes\Documents\Visual Studio 2015\Projects\StudyingTDD-master\Studyi
 C:\Users\lsimoes\Documents\Visual Studio 2015\Projects\StudyingTDD-master\StudyingTDD-master\Caelum.Leilao\bin\Debug\Caelum.Leilao.pdb
 C:\Users\lsimoes\Documents\Visual Studio 2015\Projects\StudyingTDD-master\StudyingTDD-master\Caelum.Leilao\bin\Debug\nunit.framework.dll
 C:\Users\lsimoes\Documents\Visual Studio 2015\Projects\StudyingTDD-master\StudyingTDD-master\Caelum.Leilao\bin\Debug\nunit.framework.xml
-C:\Users\lsimoes\Documents\Visual Studio 2015\Projects\StudyingTDD-master\StudyingTDD-master\Caelum.Leilao\obj\Debug\Caelum.Leilao.csprojResolveAssemblyReference.cache
 C:\Users\lsimoes\Documents\Visual Studio 2015\Projects\StudyingTDD-master\StudyingTDD-master\Caelum.Leilao\obj\Debug\Caelum.Leilao.dll
 C:\Users\lsimoes\Documents\Visual Studio 2015\Projects\StudyingTDD-master\StudyingTDD-master\Caelum.Leilao\obj\Debug\Caelum.Leilao.pdb
