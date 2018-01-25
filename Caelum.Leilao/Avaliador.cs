@@ -10,6 +10,17 @@ namespace Caelum.Leilao
     {
         private double maiorDeTodos = double.MinValue;
         private double menorDeTodos = double.MaxValue;
+        private double Total;
+        private int Quantidade;
+        public double MaiorLance
+        {
+            get { return maiorDeTodos; }
+        }
+
+        public double MenorLance
+        {
+            get { return menorDeTodos; }
+        }
 
         public void Avalia(Leilao leilao)
         {    
@@ -33,15 +44,14 @@ namespace Caelum.Leilao
             }
         }
 
-        public double MaiorLance
+        public void ValorMedio(Leilao leilao)
         {
-            get { return maiorDeTodos; }
+            foreach (var item in leilao.Lances)
+            {
+                Total += item.Valor;
+                Quantidade++;
+            }
+            Total = Total / Quantidade;
         }
-
-        public double MenorLance
-        {
-            get { return menorDeTodos; }
-        }
-
     }
 }

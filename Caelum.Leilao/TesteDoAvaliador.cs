@@ -41,9 +41,42 @@ namespace Caelum.Leilao
             Usuario Luan = new Usuario("Luan");
             Leilao leilao = new Leilao("TV");
             Avaliador leiloeiro = new Avaliador();
+            string Message;
 
             leilao.Propoe(new Lance(Luan, 0));
-            leiloeiro.Avalia(leilao);
+
+            try
+            {
+                leiloeiro.Avalia(leilao);
+            }
+            catch (Exception ex)
+            {
+                Message = ex.ToString();
+            }
+        }
+
+        [Test]
+        public void TestaValorMedio()
+        {
+            Usuario Luan = new Usuario("Luan");
+            Usuario Fabiana = new Usuario("Fabiana");
+            Usuario João = new Usuario("João");
+
+            Leilao leilao = new Leilao("Play4");
+            leilao.Propoe(new Lance(Luan, 0.1));
+            leilao.Propoe(new Lance(Fabiana, 100));
+            leilao.Propoe(new Lance(João, 250));
+
+            Avaliador avalia = new Avaliador();
+
+            try
+            {
+                avalia.ValorMedio(leilao);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
     }
 }
