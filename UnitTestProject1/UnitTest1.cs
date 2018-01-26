@@ -120,6 +120,63 @@ namespace UnitTestProject1
         }
 
         [TestMethod]
+        public void OrdenaValoresAleatorios()
+        {
+            Usuario Luan = new Usuario("Luan");
+            Usuario Fabiana = new Usuario("Fabiana");
+            Usuario João = new Usuario("João");
+
+            Leilao leilao = new Leilao("Play4");
+
+            leilao.Propoe(new Lance(Luan, 500.0));
+            leilao.Propoe(new Lance(Fabiana, 400));
+            leilao.Propoe(new Lance(João, 250));
+            leilao.Propoe(new Lance(Fabiana, 100));
+            leilao.Propoe(new Lance(Luan, 1000.0));
+
+            Avaliador avalia = new Avaliador();
+
+            avalia.Avalia(leilao);
+
+            var maiores = avalia.TresMaiores;
+            var menores = avalia.TresMenos;
+
+            
+
+            Assert.AreEqual(100, menores[0].Valor, 0.0001);
+            Assert.AreEqual(1000, maiores[0].Valor, 0.0001);
+
+        }
+
+        [TestMethod]
+        public void ValoreOrdemCrescente()
+        {
+            Usuario Luan = new Usuario("Luan");
+            Usuario Fabiana = new Usuario("Fabiana");
+            Usuario João = new Usuario("João");
+
+            Leilao leilao = new Leilao("Play4");
+
+            leilao.Propoe(new Lance(Luan, 400));
+            leilao.Propoe(new Lance(Fabiana, 300));
+            leilao.Propoe(new Lance(João, 200));
+            leilao.Propoe(new Lance(Fabiana, 100));
+
+            Avaliador avalia = new Avaliador();
+
+            avalia.Avalia(leilao);
+
+            var maiores = avalia.TresMaiores;
+            var menores = avalia.TresMenos;
+
+
+
+            Assert.AreEqual(100, menores[0].Valor, 0.0001);
+            Assert.AreEqual(400, maiores[0].Valor, 0.0001);
+
+        }
+
+        [TestMethod]
         public void IdentificaSeEPalindromoERetornaREsultadoERemoveCaracteres()
         {
             Palindromo frase = new Palindromo();
